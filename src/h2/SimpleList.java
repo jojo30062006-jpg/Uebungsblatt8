@@ -7,7 +7,7 @@ public class SimpleList {
 	
 	//Konstruktor
 	public SimpleList (Node head) {
-		head = new Node (Integer.MIN_VALUE);
+		this.head = new Node (Integer.MIN_VALUE);
 	}
 	
 	public Node getFirst() {
@@ -35,11 +35,11 @@ public class SimpleList {
 	
 	public void append (int newValue) {
 		
-		Node Ende = new Node (newValue);
+		Node ende = new Node (newValue);
 		
 		//Liste lee?
 		if (head.next == null) {
-			head.next = Ende;
+			head.next = ende;
 			return;
 		}
 		//letzten Knoten finden 
@@ -48,7 +48,7 @@ public class SimpleList {
 			letzten = letzten.next;
 		}
 		
-		letzten.next = Ende;
+		letzten.next = ende;
 	}
 	
 	public Node findFirst (int value) {
